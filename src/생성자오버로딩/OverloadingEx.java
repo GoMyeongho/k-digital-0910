@@ -5,6 +5,12 @@ package 생성자오버로딩;
 // 생성자는 용도에 맞게끔 다양한 생성자를 만들 수 있다. ( 생성자 오버로딩 )
 
 
-public class OverloadingRx {
-
+public class OverloadingEx {
+    public static void main(String[] args) {
+        Television localTV = new Television();
+        localTV.getTV();    //
+        localTV.setChannel(200);
+        Television northTV = new Television(true,100,50);
+        northTV.getTV();
+    }
 }
