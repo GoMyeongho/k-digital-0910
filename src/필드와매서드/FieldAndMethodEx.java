@@ -6,13 +6,27 @@ package 필드와매서드;
 
 public class FieldAndMethodEx {
     public static void main(String[] args) {
-       FieldAndMethodEx test = new FieldAndMethodEx();
-       int sum = test.sum1(100,200);
-       System.out.println(sum);
-       System.out.println(sum(100,200));
-       System.out.println(sum("Test", "Java"));
-       System.out.println(sum("Test", 1234));
-       System.out.println(sum(1,2,3,4,5,6,7,8,9));
+//       FieldAndMethodEx test = new FieldAndMethodEx();
+//       int sum = test.sum1(100,200);
+//       System.out.println(sum);
+//       System.out.println(sum(100,200));
+//       System.out.println(sum("Test", "Java"));
+//       System.out.println(sum("Test", 1234));
+//       System.out.println(sum(1,2,3,4,5,6,7,8,9));
+
+        Car gv70 = new Car("GV70", 220, 280, "Black");
+        Car ionic5N = new Car("아이오닉5N",250,600,"White");
+        Car x6 = new Car("X6", 230,350, "Gray");
+        gv70.getCarInfo();
+        ionic5N.getCarInfo();
+        x6.getCarInfo();
+
+        Car santafe = new Car();
+        Car sorento = new Car("쏘렌토");       //생성자 오버로딩이 안돼서 에러
+        santafe.getCarInfo();
+        sorento.getCarInfo();
+        System.out.println(Car.productNumber);
+        System.out.println(Car.company);
     }
     // 인스턴스 메서드
     int sum1(int a, int b) {
@@ -48,6 +62,20 @@ class Car{
     int speed;          //인스턴스 필드
     int horsePower;     //인스턴스 필드
     String color;       //인스턴스 필드
+    Car(){
+        modelName = "싼타페";
+        speed = 200;
+        horsePower = 200;
+        color = "Red";
+        productNumber++;
+    }
+    Car(String name){
+        modelName = name;
+        speed = 200;
+        horsePower = 200;
+        color = "Red";
+        productNumber++;
+    }
     // 매개변수가 있는 생성자
     Car(String name, int speed, int power, String color) {
         modelName = name;
@@ -55,5 +83,11 @@ class Car{
         this.horsePower = power;   // == horsePower = power
         this.color = color;
         productNumber++;    // 클래스 필드
+    }
+    void getCarInfo() {
+        System.out.println("=======" + modelName + "=======");
+        System.out.println("속도 :" + speed);
+        System.out.println("마력 :" + horsePower);
+        System.out.println("색깔 :" + color);
     }
 }
