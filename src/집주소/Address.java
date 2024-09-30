@@ -21,7 +21,15 @@ public class Address {
         }
         return width;
     }
-    public static int calcWidth(String num, boolean index){
-
+    public static int calcWidth(int num){
+        int width = 1;
+        int length = String.valueOf(num).length();
+        int temp;
+        for (int i = length ; i >= 0; i--) {
+            temp = (int) (num % Math.pow(10,i+1) /  Math.pow(10,i));
+            if (temp > 2) width += 4;
+            else width += numberWidth[temp];
+        }
+        return width;
     }
 }
