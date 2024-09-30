@@ -14,5 +14,9 @@ public class StaticBankMain {
         kakao.setWithdraw(2000);
         System.out.println(kakao.getBank() + "에 " + kakao.getAccount() + "원이 있습니다.");
         System.out.println("계좌가 " + Bank.getCount() + "개 개설되었습니다. ");
+
+        System.out.println((Util.max(100,200)));
+        System.out.println(Util.isEven(123));
+        System.out.println(Util.getCurrentDate("yyyyMMdd"));
     }
 }
