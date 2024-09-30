@@ -1,7 +1,6 @@
 package 영화표예매;
 
-import java.util.Collection;
-import java.util.Collections;
+
 
 public class MovieTicket {
     // 좌석 10개에 대한 정수형 배열의 인스턴스 변수 생성
