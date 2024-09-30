@@ -4,5 +4,10 @@ package 싱글톤;
 // 또 다른 장점은 클래스로 생성된 객체간의 정보공유가 쉬움 (안드로이드나 iOS에서 사용되는 방식)
 // 단점은 동시성 문제가 발생할 수 있음
 public class SingletonEx {
-
+    public static void main(String[] args) {
+        Student student1 = new Student();
+        Student student2 = new Student();
+        student1.setInfo("안유진", 21);    // 정보를 전달
+        student2.viewInfo();    // 전달된 정보를 확인
+    }
 }
