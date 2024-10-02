@@ -50,7 +50,6 @@ public class CarMain {
             break;
         }
 
-
         int weatherSel;
         while (true) {
             System.out.print("날씨 선택 [1]맑음 [2]비 [3]눈 : ");
@@ -75,12 +74,10 @@ public class CarMain {
         car.setTotalOil(areaSel);
         car.totalTime(weatherSel);
 
-
         System.out.println("=====" + name + "=====");
         System.out.println("총 비용 : " + df.format(car.totalPay()));
         System.out.println("총 주유횟수 : " + car.totalRefuel());
         System.out.println("총 이동 시간 : " + car.getTotalHour() + "시간 " + car.getTotalMin() + "분");
-
 
     }
 }

@@ -67,12 +67,10 @@ public class CarMain2 {
         car.setTotalOil(areaSel);
         car.totalTime(weatherSel);
 
-
         System.out.println("=====" + name + "=====");
         System.out.println("총 비용 : " + df.format(car.totalPay()));
         System.out.println("총 주유횟수 : " + car.totalRefuel());
         System.out.println("총 이동 시간 : " + car.getTotalHour() + "시간 " + car.getTotalMin() + "분");
-
 
     }
 }

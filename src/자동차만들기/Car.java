@@ -8,7 +8,7 @@ public abstract class Car {
     protected String name;
 
     final static double[] weather = {0, 1, 1.2, 1.4};
-    final static int[] AREA = {0, 400, 200, 150, 300};
+    final static int[] AREA = {0, 400, 150, 200, 300};
     final static int OILPAY = 2000;
 
     protected int totalMove;
