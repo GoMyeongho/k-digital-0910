@@ -6,9 +6,11 @@ public abstract class Car {
     protected int tank;
     protected int seatNum;
     protected String name;
+
     final static double[] weather = {0, 1, 1.2, 1.4};
     final static int[] AREA = {0, 400, 200, 150, 300};
     final static int OILPAY = 2000;
+
     protected int totalMove;
     protected double totalOil;
     protected int totalHour;
@@ -25,14 +27,13 @@ public abstract class Car {
         totalOil = (double) totalDist / fuelEff;
     }
     public int totalPay() {
-        return (int) (totalOil * OILPAY);
+        return (int) Math.ceil(totalOil * OILPAY);
     }
     public int totalRefuel() {
-        return (totalOil % tank == 0) ? (int)totalOil / tank : (int)totalOil / tank + 1;
+        return  (int) Math.ceil(totalOil / tank);
     }
     public void totalTime(int weatherSel) {
         totalDist = (int) (weather[weatherSel] * totalDist);
-        System.out.println(totalDist);
         totalHour = totalDist / speed;
         totalMin = (totalDist % speed) * 60 / speed;
     }
