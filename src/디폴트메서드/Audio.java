@@ -27,4 +27,9 @@ public class Audio implements RemoteController{
         System.out.println("오디오 입니다.");
         System.out.println("현재 볼륨은 " + volume + "입니다.");
     }
+    @Override
+    public void setMute(boolean mute) {
+        if (mute) System.out.println("오디오를 무음 처리 합니다.");
+        else System.out.println("오디오의 무음처리를 해제합니다.");
+    }
 }
