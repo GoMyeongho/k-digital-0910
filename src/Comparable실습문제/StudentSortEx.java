@@ -12,7 +12,6 @@ public class StudentSortEx {
         Scanner sc = new Scanner(System.in);
         List<Student> students = new ArrayList<>();
 
-
     /*
         students.add(new Student("이름1",50,60,70));
         students.add(new Student("이름2",30,20,60));
@@ -32,7 +31,8 @@ public class StudentSortEx {
             int math = sc.nextInt();
             students.add(new Student(name, korean, english, math));
         }
-        students.sort(Student::compareTo);
+        Collections.sort(students);
+        //students.sort(Student::compareTo);
         for (Student student : students) System.out.println(student);
 
     }
