@@ -16,9 +16,14 @@ public class CarSortMain {
             cars.add(new Car(year, name, price));
         }
         System.out.println("정렬 방식을 선택하시오");
-        System.out.println("연식 : [1] 오름차순  [2] 내림차순");
-        Car.yearUpper =
-        System.out.println("이름 : [1] 오름차순  [2] 내림차순");
-        System.out.println("가격 : [1] 오름차순  [2] 내림차순");
+        System.out.println("연식 : [1] 오름차순  [그외] 내림차순");
+        Car.setYearUpper(sc.next().equals("1"));
+        System.out.println("이름 : [1] 오름차순  [그외] 내림차순");
+        Car.setNameUpper(sc.next().equals("1"));
+        System.out.println("가격 : [1] 오름차순  [그외] 내림차순");
+        Car.setPriceUpper(sc.next().equals("1"));
+        cars.sort(new CarComparator());
+        for ( Car car : cars) System.out.println(car);
+        ;
     }
 }
