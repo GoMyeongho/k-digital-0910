@@ -12,10 +12,12 @@ public class JavaFinalReportMain {
     public static void main(String[] args) {
         FileInputStream inputStream = null;
         try {
+            // 상대 경로로 파일 가져오기
             inputStream = new FileInputStream("src/자바파이널과제/Student.txt");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             System.out.println("파일을 찾지 못했습니다.");
+            System.exit(0);
         }
         List<Student> list = new ArrayList<>();
         Scanner sc = new Scanner(inputStream);
@@ -49,4 +51,5 @@ public class JavaFinalReportMain {
             break;
         }
     }
+
 }
